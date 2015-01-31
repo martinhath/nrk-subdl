@@ -2,7 +2,7 @@ import urllib.request as u
 import re
 from html.parser import *
 
-default_sub_length = 4000
+default_sub_length = 6000
 
 times = []
 lines = []
@@ -79,7 +79,7 @@ def print_srt(pairs):
         i += 1
 
 if __name__ == '__main__':
-    html = u.urlopen(get_url(1))
+    html = u.urlopen(get_url(2))
     string = "".join(html.read().decode("utf-8"))
     parser = Parser()
     parser.feed(string)
